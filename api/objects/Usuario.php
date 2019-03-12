@@ -5,12 +5,12 @@
     private $conn;
     private $table_name = "usuario";
 // object properties
-   private $id;
-   private $nombre;
-   private $apellidos;
-   private $cedula;
-   private $creacion;
-   private $hash;
+   public $id;
+   public $nombre;
+   public $apellidos;
+   public $cedula;
+   public $creacion;
+   public $hash;
 
 
     // constructor with $db as database connection
