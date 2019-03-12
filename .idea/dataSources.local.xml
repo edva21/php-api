@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="desabookingdb@localhost" uuid="84a162b4-d92c-4b51-a43b-002539469176">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>desabUsr</user-name>
+    </data-source>
+  </component>
+</project>
