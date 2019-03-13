@@ -83,3 +83,11 @@ DELIMITER //
     END;
     //
 DELIMITER ;
+
+CALL CREATEusuario("Eddy","Valverde Garro","116240021");
+CALL CREATEusuario("Josue","Garro Valverde","951753654");
+CALL CREATEusuario("Betty","Donnis Walt","9879987985");
+CALL CREATEusuario("Eddy","Merckx","6544422213");
+CALL CREATEusuario("Peter","Sangan","116640021");
+CALL CREATEusuario("Alberto","Contador","6545411111");
+CALL CREATEusuario("Alejandro","Valverde","116240333");
