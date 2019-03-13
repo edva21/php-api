@@ -40,7 +40,7 @@ DELIMITER ;
 DELIMITER //
     CREATE PROCEDURE READusuario(IN p_id BIGINT)
     BEGIN
-            SELECT nombre,apellidos,cedula,creacion,hash
+            SELECT id,nombre,apellidos,cedula,creacion,hash
               FROM usuario
             WHERE id=p_id;
     END;
@@ -50,9 +50,8 @@ DELIMITER ;
 DELIMITER //
     CREATE PROCEDURE READALLusuario()
     BEGIN
-            SELECT nombre,apellidos,cedula,creacion,hash
-            FROM usuario
-            WHERE id=p_id;
+            SELECT id,nombre,apellidos,cedula,creacion,hash
+            FROM usuario;
     END;
     //
 DELIMITER ;

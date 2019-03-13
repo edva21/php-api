@@ -40,11 +40,12 @@ if($num>0){
         // just $name only
         extract($row);
 
-        $usuario_item=array(
+        $usuario_item=array(//nombre,apellidos,cedula,id,creacion,hash
+            "nombre" => $usuario->nombre,
+            "apellidos" => $usuario->apellidos,
             "cedula" =>  $usuario->cedula,
             "id" => $usuario->id,
-            "apellidos" => $usuario->apellidos,
-            "nombre" => $usuario->nombre,
+            "creacion" => $usuario->creacion,
             "hash" => $usuario->hash,
         );
 

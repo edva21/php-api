@@ -21,7 +21,7 @@
     function read(){
 
         // select all query
-        $query = "READALLusuario()";
+        $query = "CALL READALLusuario()";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -35,7 +35,7 @@
     function create(){
 
         // query to insert record
-        $query = "READALLusuario(nombre=:nombre,apellidos=:apellidos,cedula=:cedula)";
+        $query = "CALL CREATEusuario(nombre=:nombre,apellidos=:apellidos,cedula=:cedula)";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
