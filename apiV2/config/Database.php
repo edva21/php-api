@@ -10,9 +10,9 @@ class Database{
 
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "prodookingdb";
-    private $username = "prodUsr";
-    private $password = "prodRoot";
+    private $db_name = "desabookingdb";
+    private $username = "desabUsr";
+    private $password = "desabRoot";
     public $conn;
 
     // get the database connection
