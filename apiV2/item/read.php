@@ -41,7 +41,7 @@ if($num>0){
         extract($row);
 
         $item_item=array(//nombre,apellidos,cedula,id,creacion,hash
-            "id" => $item->id,
+            /*"id" => $item->id,
             "servicio" => $item->servicio,
             "nombreDeContacto" => $item->nombreDeContacto,
             "correoElectronico1" => $item->correoElectronico1,
@@ -67,7 +67,34 @@ if($num>0){
             "telefonoOficina_fac" => $item->telefonoOficina_fac,
             "numeroReserva_fac" => $item->numeroReserva_fac,
             "creacion" => $item->creacion,
-            "_hash" => $item->_hash
+            "_hash" => $item->_hash*/
+            "id" => $row['id'],
+            "servicio" => $row['servicio'],
+            "nombreDeContacto" => $row['nombreDeContacto'],
+            "correoElectronico1" => $row['correoElectronico1'],
+            "correoElectronico2" => $row['correoElectronico2'],
+            "empresa" => $row['empresa'],
+            "telefono" => $row['telefono'],
+            "direccion" => $row['direccion'],
+            "fecha" => $row['fecha'],
+            "tipoUnidad1" => $row['tipoUnidad1'],
+            "espaciosRequeridos" => $row['espaciosRequeridos'],
+            "tipoUnidad2" => $row['tipoUnidad2'],
+            "descripcionDeMercancia" => $row['descripcionDeMercancia'],
+            "razonSocial_fac" => $row['razonSocial_fac'],
+            "cedulaJuridicaOFisica_fac" => $row['cedulaJuridicaOFisica_fac'],
+            "nombreRepresentanteLegal_fac" => $row['nombreRepresentanteLegal_fac'],
+            "cedulaRepresentanteLegal_fac" => $row['cedulaRepresentanteLegal_fac'],
+            "provincia_fac" => $row['provincia_fac'],
+            "canton_fac" => $row['canton_fac'],
+            "distrito_fac" => $row['distrito_fac'],
+            "barrio_fac" => $row['barrio_fac'],
+            "direccion_fac" => $row['direccion_fac'],
+            "correoEncargadoFacturaElectronica_fac" => $row['correoEncargadoFacturaElectronica_fac'],
+            "telefonoOficina_fac" => $row['telefonoOficina_fac'],
+            "numeroReserva_fac" => $row['numeroReserva_fac'],
+            "creacion" => $row['creacion'],
+            "_hash" => $row['_hash']
         );
 
         array_push($items_arr["records"], $item_item);
