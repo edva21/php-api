@@ -41,12 +41,33 @@ if($num>0){
         extract($row);
 
         $item_item=array(//nombre,apellidos,cedula,id,creacion,hash
-            "nombre" => $item->nombre,
-            "apellidos" => $item->apellidos,
-            "cedula" =>  $item->cedula,
             "id" => $item->id,
+            "servicio" => $item->servicio,
+            "nombreDeContacto" => $item->nombreDeContacto,
+            "correoElectronico1" => $item->correoElectronico1,
+            "correoElectronico2" => $item->correoElectronico2,
+            "empresa" => $item->empresa,
+            "telefono" => $item->telefono,
+            "direccion" => $item->direccion,
+            "fecha" => $item->fecha,
+            "tipoUnidad1" => $item->tipoUnidad1,
+            "espaciosRequeridos" => $item->espaciosRequeridos,
+            "tipoUnidad2" => $item->tipoUnidad2,
+            "descripcionDeMercancia" => $item->descripcionDeMercancia,
+            "razonSocial_fac" => $item->razonSocial_fac,
+            "cedulaJuridicaOFisica_fac" => $item->cedulaJuridicaOFisica_fac,
+            "nombreRepresentanteLegal_fac" => $item->nombreRepresentanteLegal_fac,
+            "cedulaRepresentanteLegal_fac" => $item->cedulaRepresentanteLegal_fac,
+            "provincia_fac" => $item->provincia_fac,
+            "canton_fac" => $item->canton_fac,
+            "distrito_fac" => $item->distrito_fac,
+            "barrio_fac" => $item->barrio_fac,
+            "direccion_fac" => $item->direccion_fac,
+            "correoEncargadoFacturaElectronica_fac" => $item->correoEncargadoFacturaElectronica_fac,
+            "telefonoOficina_fac" => $item->telefonoOficina_fac,
+            "numeroReserva_fac" => $item->numeroReserva_fac,
             "creacion" => $item->creacion,
-            "hash" => $item->hash,
+            "_hash" => $item->_hash
         );
 
         array_push($items_arr["records"], $item_item);
