@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d09fb3-79b4-4972-8eb8-8158b5009817" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apiV2/item/read.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiV2/objects/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/apiV2/objects/Item.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiV2/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/apiV2/sql.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/usuario/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="855">
               <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
             </state>
           </provider>
@@ -48,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/usuario/read.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="120">
               <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
             </state>
           </provider>
@@ -63,11 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiV2/sql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="930">
+              <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apiV2/item/read.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -82,27 +93,13 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apiV2/item/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apiV2/objects/Item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="210">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apiV2/item/update.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -114,10 +111,14 @@
       <find>// VARCHAR,</find>
       <find>// TEXT,</find>
       <find>hash</find>
+      <find>telefonoOficina</find>
+      <find>Usuario</find>
     </findStrings>
     <replaceStrings>
       <replace>Usuario</replace>
       <replace>$usuario</replace>
+      <replace>telOf_factes</replace>
+      <replace>Item</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -136,8 +137,9 @@
         <option value="$PROJECT_DIR$/api/task1desabookingdb.sql" />
         <option value="$PROJECT_DIR$/api/usuario/read.php" />
         <option value="$PROJECT_DIR$/apiV2/item/create.php" />
-        <option value="$PROJECT_DIR$/apiV2/objects/Item.php" />
         <option value="$PROJECT_DIR$/apiV2/sql.sql" />
+        <option value="$PROJECT_DIR$/apiV2/item/read.php" />
+        <option value="$PROJECT_DIR$/apiV2/objects/Item.php" />
       </list>
     </option>
   </component>
@@ -152,8 +154,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,25 +166,30 @@
             <path>
               <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="desabooking" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desabooking" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="desabooking" type="462c0819:PsiDirectoryNode" />
               <item name="apiV2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="desabooking" type="462c0819:PsiDirectoryNode" />
               <item name="apiV2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
               <item name="desabooking" type="462c0819:PsiDirectoryNode" />
               <item name="apiV2" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="desabooking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desabooking" type="462c0819:PsiDirectoryNode" />
-              <item name="apiV2" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -194,12 +201,15 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552489658467" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api-php-mysql" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552573028965" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apiV2/item" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apiV2/item" />
       <recent name="$PROJECT_DIR$/api" />
@@ -230,17 +240,19 @@
       <workItem from="1552428407254" duration="8975000" />
       <workItem from="1552452944999" duration="1158000" />
       <workItem from="1552478585307" duration="7791000" />
+      <workItem from="1552570255303" duration="2083000" />
+      <workItem from="1552572369546" duration="645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17924000" />
+    <option name="totallyTimeSpent" value="20652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25737053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26613545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -275,9 +287,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84a162b4-d92c-4b51-a43b-002539469176/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84a162b4-d92c-4b51-a43b-002539469176/console.sql" />
     <entry file="file://$PROJECT_DIR$/api/config/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -313,6 +323,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apiV2/item/update.php" />
+    <entry file="file://$PROJECT_DIR$/apiV2/item/create.php" />
+    <entry file="file://$PROJECT_DIR$/api/usuario/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/usuario/delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -320,16 +339,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/usuario/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/usuario/read.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="120">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
         </state>
       </provider>
@@ -341,33 +353,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apiV2/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apiV2/config/core.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apiV2/config/Database.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiV2/item/update.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiV2/item/create.php">
+    <entry file="file://$PROJECT_DIR$/apiV2/item/read.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="42">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apiV2/objects/Item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiV2/sql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="210">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
         </state>
       </provider>
     </entry>

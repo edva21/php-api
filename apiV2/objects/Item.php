@@ -52,7 +52,7 @@ public $_hash;
         // select all query
         $query = "SELECT id,servicio,nombreDeContacto,
         correoElectronico1,correoElectronico2,empresa,
-        telefono,direccion,fecha,ipoUnidad1,
+        telefono,direccion,fecha,tipoUnidad1,
         espaciosRequeridos,tipoUnidad2,
         descripcionDeMercancia,razonSocial_fac,
         cedulaJuridicaOFisica_fac,
