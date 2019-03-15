@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: eddy
+ * Date: 12/03/19
+ * Time: 01:13 PM
+ */
+
 class Database{
 
     // specify your own database credentials
@@ -23,4 +30,3 @@ class Database{
         return $this->conn;
     }
 }
-?>
