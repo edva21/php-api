@@ -77,26 +77,17 @@ public $_hash;
     function create(){
 
         // query to insert record
-        $query = "INSERT INTO
-                " . $this->table_name . "
-            SET
-                servicio=:servicio,nombreDeContacto=:nombreDeContacto,
-        correoElectronico1=:correoElectronico1,correoElectronico2=:correoElectronico2,empresa=:empresa,
-        telefono=:telefono,direccion=:direccion,fecha=:fecha,ipoUnidad1=:ipoUnidad1,
-        espaciosRequeridos=:espaciosRequeridos,tipoUnidad2=:tipoUnidad2,
-        descripcionDeMercancia=:descripcionDeMercancia,razonSocial_fac=:razonSocial_fac,
-        cedulaJuridicaOFisica_fac=:cedulaJuridicaOFisica_fac,
-        nombreRepresentanteLegal_fac=:nombreRepresentanteLegal_fac,
-        cedulaRepresentanteLegal_fac=:cedulaRepresentanteLegal_fac,provincia_fac=:provincia_fac,
-        canton_fac=:canton_fac,distrito_fac=:distrito_fac,barrio_fac=:barrio_fac,
-        direccion_fac=:direccion_fac,
-        correoEncargadoFacturaElectronica_fac=:correoEncargadoFacturaElectronica_fac,
-        telefonoOficina_fac=:telefonoOficina_fac,numeroReserva_fac=:numeroReserva_fac";
+        $query = "INSERT INTO item(servicio, nombreDeContacto, correoElectronico1, correoElectronico2, empresa, telefono, direccion,
+                 fecha, tipoUnidad1, espaciosRequeridos, tipoUnidad2, descripcionDeMercancia, razonSocial_fac,
+                 cedulaJuridicaOFisica_fac, nombreRepresentanteLegal_fac, cedulaRepresentanteLegal_fac, provincia_fac,
+                 canton_fac, distrito_fac, barrio_fac, direccion_fac, correoEncargadoFacturaElectronica_fac,
+                 telefonoOficina_fac, numeroReserva_fac, creacion,_hash) 
+                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
-        // sanitize
+
         $this->servicio=htmlspecialchars(strip_tags($this->servicio));
         $this->nombreDeContacto=htmlspecialchars(strip_tags($this->nombreDeContacto));
         $this->correoElectronico1=htmlspecialchars(strip_tags($this->correoElectronico1));
@@ -123,30 +114,32 @@ public $_hash;
         $this->numeroReserva_fac=htmlspecialchars(strip_tags($this->numeroReserva_fac));
 
         // bind values
-        $stmt->bindParam(":servicio",$this->servicio);
-        $stmt->bindParam(":nombreDeContacto",$this->nombreDeContacto);
-        $stmt->bindParam(":correoElectronico1",$this->correoElectronico1);
-        $stmt->bindParam(":correoElectronico2",$this->correoElectronico2);
-        $stmt->bindParam(":empresa",$this->empresa);
-        $stmt->bindParam(":telefono",$this->telefono);
-        $stmt->bindParam(":direccion",$this->direccion);
-        $stmt->bindParam(":fecha",$this->fecha);
-        $stmt->bindParam(":tipoUnidad1",$this->tipoUnidad1);
-        $stmt->bindParam(":espaciosRequeridos",$this->espaciosRequeridos);
-        $stmt->bindParam(":tipoUnidad2",$this->tipoUnidad2);
-        $stmt->bindParam(":descripcionDeMercancia",$this->descripcionDeMercancia);
-        $stmt->bindParam(":razonSocial_fac",$this->razonSocial_fac);
-        $stmt->bindParam(":cedulaJuridicaOFisica_fac",$this->cedulaJuridicaOFisica_fac);
-        $stmt->bindParam(":nombreRepresentanteLegal_fac",$this->nombreRepresentanteLegal_fac);
-        $stmt->bindParam(":cedulaRepresentanteLegal_fac",$this->cedulaRepresentanteLegal_fac);
-        $stmt->bindParam(":provincia_fac",$this->provincia_fac);
-        $stmt->bindParam(":canton_fac",$this->canton_fac);
-        $stmt->bindParam(":distrito_fac",$this->distrito_fac);
-        $stmt->bindParam(":barrio_fac",$this->barrio_fac);
-        $stmt->bindParam(":direccion_fac",$this->distrito_fac);
-        $stmt->bindParam(":correoEncargadoFacturaElectronica_fac",$this->correoEncargadoFacturaElectronica_fac);
-        $stmt->bindParam(":telefonoOficina_fac",$this->telefonoOficina_fac);
-        $stmt->bindParam(":numeroReserva_fac",$this->numeroReserva_fac);
+        $stmt->bindParam(1,$this->servicio);
+        $stmt->bindParam(2,$this->nombreDeContacto);
+        $stmt->bindParam(3,$this->correoElectronico1);
+        $stmt->bindParam(4,$this->correoElectronico2);
+        $stmt->bindParam(5,$this->empresa);
+        $stmt->bindParam(6,$this->telefono);
+        $stmt->bindParam(7,$this->direccion);
+        $stmt->bindParam(8,$this->fecha);
+        $stmt->bindParam(9,$this->tipoUnidad1);
+        $stmt->bindParam(10,$this->espaciosRequeridos);
+        $stmt->bindParam(11,$this->tipoUnidad2);
+        $stmt->bindParam(12,$this->descripcionDeMercancia);
+        $stmt->bindParam(13,$this->razonSocial_fac);
+        $stmt->bindParam(14,$this->cedulaJuridicaOFisica_fac);
+        $stmt->bindParam(15,$this->nombreRepresentanteLegal_fac);
+        $stmt->bindParam(16,$this->cedulaRepresentanteLegal_fac);
+        $stmt->bindParam(17,$this->provincia_fac);
+        $stmt->bindParam(18,$this->canton_fac);
+        $stmt->bindParam(19,$this->distrito_fac);
+        $stmt->bindParam(20,$this->barrio_fac);
+        $stmt->bindParam(21,$this->direccion_fac);
+        $stmt->bindParam(22,$this->correoEncargadoFacturaElectronica_fac);
+        $stmt->bindParam(23,$this->telefonoOficina_fac);
+        $stmt->bindParam(24,$this->numeroReserva_fac);
+        $stmt->bindParam(25,$this->creacion);
+        $stmt->bindParam(26,$this->_hash);
 
         // execute query
         if($stmt->execute()){
@@ -160,18 +153,18 @@ public $_hash;
     function readOne(){
 
         // query to read single record
-        $query = "SELECT id,servicio,nombreDeContacto,
-        correoElectronico1,correoElectronico2,empresa,
-        telefono,direccion,fecha,tipoUnidad1,
-        espaciosRequeridos,tipoUnidad2,
-        descripcionDeMercancia,razonSocial_fac,
-        cedulaJuridicaOFisica_fac,
-        nombreRepresentanteLegal_fac,
-        cedulaRepresentanteLegal_fac,provincia_fac,
-        canton_fac,distrito_fac,barrio_fac,
-        direccion_fac,
-        correoEncargadoFacturaElectronica_fac,
-        telefonoOficina_fac,numeroReserva_fac,creacion,_hash
+            $query = "SELECT id,servicio,nombreDeContacto,
+            correoElectronico1,correoElectronico2,empresa,
+            telefono,direccion,fecha,tipoUnidad1,
+            espaciosRequeridos,tipoUnidad2,
+            descripcionDeMercancia,razonSocial_fac,
+            cedulaJuridicaOFisica_fac,
+            nombreRepresentanteLegal_fac,
+            cedulaRepresentanteLegal_fac,provincia_fac,
+            canton_fac,distrito_fac,barrio_fac,
+            direccion_fac,
+            correoEncargadoFacturaElectronica_fac,
+            telefonoOficina_fac,numeroReserva_fac,creacion,_hash
             FROM
                 " . $this->table_name .
             " WHERE
@@ -227,10 +220,32 @@ public $_hash;
         $query = "UPDATE
                 " . $this->table_name . "
             SET
-                name = :name,
-                price = :price,
-                description = :description,
-                category_id = :category_id
+                servicio = :servicio, 
+            nombreDeContacto = :nombreDeContacto, 
+            correoElectronico1 = :correoElectronico1, 
+            correoElectronico2 = :correoElectronico2, 
+            empresa = :empresa, 
+            telefono = :telefono, 
+            direccion = :direccion, 
+            fecha = :fecha, 
+            tipoUnidad1 = :tipoUnidad1, 
+            espaciosRequeridos = :espaciosRequeridos, 
+            tipoUnidad2 = :tipoUnidad2, 
+            descripcionDeMercancia = :descripcionDeMercancia, 
+            razonSocial_fac = :razonSocial_fac, 
+            cedulaJuridicaOFisica_fac = :cedulaJuridicaOFisica_fac, 
+            nombreRepresentanteLegal_fac = :nombreRepresentanteLegal_fac, 
+            cedulaRepresentanteLegal_fac = :cedulaRepresentanteLegal_fac, 
+            provincia_fac = :provincia_fac, 
+            canton_fac = :canton_fac, 
+            distrito_fac = :distrito_fac, 
+            barrio_fac = :barrio_fac, 
+            direccion_fac = :direccion_fac, 
+            correoEncargadoFacturaElectronica_fac = :correoEncargadoFacturaElectronica_fac, 
+            telefonoOficina_fac = :telefonoOficina_fac, 
+            numeroReserva_fac = :numeroReserva_fac, 
+            creacion = :creacion,
+            _hash = :_hash
             WHERE
                 id = :id";
 
@@ -238,18 +253,58 @@ public $_hash;
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->name=htmlspecialchars(strip_tags($this->name));
-        $this->price=htmlspecialchars(strip_tags($this->price));
-        $this->description=htmlspecialchars(strip_tags($this->description));
-        $this->category_id=htmlspecialchars(strip_tags($this->category_id));
-        $this->id=htmlspecialchars(strip_tags($this->id));
+        $this->servicio=htmlspecialchars(strip_tags($this->servicio));
+        $this->nombreDeContacto=htmlspecialchars(strip_tags($this->nombreDeContacto));
+        $this->correoElectronico1=htmlspecialchars(strip_tags($this->correoElectronico1));
+        $this->correoElectronico2=htmlspecialchars(strip_tags($this->correoElectronico2));
+        $this->empresa=htmlspecialchars(strip_tags($this->empresa));
+        $this->telefono=htmlspecialchars(strip_tags($this->telefono));
+        $this->direccion=htmlspecialchars(strip_tags($this->direccion));
+        $this->fecha=htmlspecialchars(strip_tags($this->fecha));
+        $this->tipoUnidad1=htmlspecialchars(strip_tags($this->tipoUnidad1));
+        $this->espaciosRequeridos=htmlspecialchars(strip_tags($this->espaciosRequeridos));
+        $this->tipoUnidad2=htmlspecialchars(strip_tags($this->tipoUnidad2));
+        $this->descripcionDeMercancia=htmlspecialchars(strip_tags($this->descripcionDeMercancia));
+        $this->razonSocial_fac=htmlspecialchars(strip_tags($this->razonSocial_fac));
+        $this->cedulaJuridicaOFisica_fac=htmlspecialchars(strip_tags($this->cedulaJuridicaOFisica_fac));
+        $this->nombreRepresentanteLegal_fac=htmlspecialchars(strip_tags($this->nombreRepresentanteLegal_fac));
+        $this->cedulaRepresentanteLegal_fac=htmlspecialchars(strip_tags($this->cedulaRepresentanteLegal_fac));
+        $this->provincia_fac=htmlspecialchars(strip_tags($this->provincia_fac));
+        $this->canton_fac=htmlspecialchars(strip_tags($this->canton_fac));
+        $this->distrito_fac=htmlspecialchars(strip_tags($this->distrito_fac));
+        $this->barrio_fac=htmlspecialchars(strip_tags($this->barrio_fac));
+        $this->direccion_fac=htmlspecialchars(strip_tags($this->direccion_fac));
+        $this->correoEncargadoFacturaElectronica_fac=htmlspecialchars(strip_tags($this->correoEncargadoFacturaElectronica_fac));
+        $this->telefonoOficina_fac=htmlspecialchars(strip_tags($this->telefonoOficina_fac));
+        $this->numeroReserva_fac=htmlspecialchars(strip_tags($this->numeroReserva_fac));
 
         // bind new values
-        $stmt->bindParam(':name', $this->name);
-        $stmt->bindParam(':price', $this->price);
-        $stmt->bindParam(':description', $this->description);
-        $stmt->bindParam(':category_id', $this->category_id);
-        $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(1,$this->servicio);
+        $stmt->bindParam(2,$this->nombreDeContacto);
+        $stmt->bindParam(3,$this->correoElectronico1);
+        $stmt->bindParam(4,$this->correoElectronico2);
+        $stmt->bindParam(5,$this->empresa);
+        $stmt->bindParam(6,$this->telefono);
+        $stmt->bindParam(7,$this->direccion);
+        $stmt->bindParam(8,$this->fecha);
+        $stmt->bindParam(9,$this->tipoUnidad1);
+        $stmt->bindParam(10,$this->espaciosRequeridos);
+        $stmt->bindParam(11,$this->tipoUnidad2);
+        $stmt->bindParam(12,$this->descripcionDeMercancia);
+        $stmt->bindParam(13,$this->razonSocial_fac);
+        $stmt->bindParam(14,$this->cedulaJuridicaOFisica_fac);
+        $stmt->bindParam(15,$this->nombreRepresentanteLegal_fac);
+        $stmt->bindParam(16,$this->cedulaRepresentanteLegal_fac);
+        $stmt->bindParam(17,$this->provincia_fac);
+        $stmt->bindParam(18,$this->canton_fac);
+        $stmt->bindParam(19,$this->distrito_fac);
+        $stmt->bindParam(20,$this->barrio_fac);
+        $stmt->bindParam(21,$this->direccion_fac);
+        $stmt->bindParam(22,$this->correoEncargadoFacturaElectronica_fac);
+        $stmt->bindParam(23,$this->telefonoOficina_fac);
+        $stmt->bindParam(24,$this->numeroReserva_fac);
+        $stmt->bindParam(25,$this->creacion);
+        $stmt->bindParam(26,$this->_hash);
 
         // execute the query
         if($stmt->execute()){
