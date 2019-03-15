@@ -160,15 +160,22 @@ public $_hash;
     function readOne(){
 
         // query to read single record
-        $query = "SELECT
-                c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
+        $query = "SELECT id,servicio,nombreDeContacto,
+        correoElectronico1,correoElectronico2,empresa,
+        telefono,direccion,fecha,tipoUnidad1,
+        espaciosRequeridos,tipoUnidad2,
+        descripcionDeMercancia,razonSocial_fac,
+        cedulaJuridicaOFisica_fac,
+        nombreRepresentanteLegal_fac,
+        cedulaRepresentanteLegal_fac,provincia_fac,
+        canton_fac,distrito_fac,barrio_fac,
+        direccion_fac,
+        correoEncargadoFacturaElectronica_fac,
+        telefonoOficina_fac,numeroReserva_fac,creacion,_hash
             FROM
-                " . $this->table_name . " p
-                LEFT JOIN
-                    categories c
-                        ON p.category_id = c.id
-            WHERE
-                p.id = ?
+                " . $this->table_name .
+            " WHERE
+                id = ?
             LIMIT
                 0,1";
 
@@ -176,7 +183,7 @@ public $_hash;
         $stmt = $this->conn->prepare( $query );
 
         // bind id of product to be updated
-        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(1,$this->id);
 
         // execute query
         $stmt->execute();
@@ -185,11 +192,33 @@ public $_hash;
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // set values to object properties
-        $this->name = $row['name'];
-        $this->price = $row['price'];
-        $this->description = $row['description'];
-        $this->category_id = $row['category_id'];
-        $this->category_name = $row['category_name'];
+        $this->id = $row['id'];
+        $this->servicio = $row['servicio'];
+        $this->nombreDeContacto = $row['nombreDeContacto'];
+        $this->correoElectronico1 = $row['correoElectronico1'];
+        $this->correoElectronico2 = $row['correoElectronico2'];
+        $this->empresa = $row['empresa'];
+        $this->telefono = $row['telefono'];
+        $this->direccion = $row['direccion'];
+        $this->fecha = $row['fecha'];
+        $this->tipoUnidad1 = $row['tipoUnidad1'];
+        $this->espaciosRequeridos = $row['espaciosRequeridos'];
+        $this->tipoUnidad2 = $row['tipoUnidad2'];
+        $this->descripcionDeMercancia = $row['descripcionDeMercancia'];
+        $this->razonSocial_fac = $row['razonSocial_fac'];
+        $this->cedulaJuridicaOFisica_fac = $row['cedulaJuridicaOFisica_fac'];
+        $this->nombreRepresentanteLegal_fac = $row['nombreRepresentanteLegal_fac'];
+        $this->cedulaRepresentanteLegal_fac = $row['cedulaRepresentanteLegal_fac'];
+        $this->provincia_fac = $row['provincia_fac'];
+        $this->canton_fac = $row['canton_fac'];
+        $this->distrito_fac = $row['distrito_fac'];
+        $this->barrio_fac = $row['barrio_fac'];
+        $this->direccion_fac = $row['direccion_fac'];
+        $this->correoEncargadoFacturaElectronica_fac = $row['correoEncargadoFacturaElectronica_fac'];
+        $this->telefonoOficina_fac = $row['telefonoOficina_fac'];
+        $this->numeroReserva_fac = $row['numeroReserva_fac'];
+        $this->creacion = $row['creacion'];
+        $this->_hash = $row['_hash'];
     }
     // update the product
     function update(){
